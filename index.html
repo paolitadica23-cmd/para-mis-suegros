@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mis suegros 🌻</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --verde:#7a9a6b;
+    --durazno:#e39b6b;
+    --dorado:#c9a24a;
+    --texto:#4a4034;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:'Cormorant Garamond',Georgia,serif;
+    color:var(--texto);
+    background:linear-gradient(160deg,#f4f8ee 0%,#fff3e6 50%,#fff9ec 100%);
+    min-height:100vh;overflow-x:hidden;
+  }
+
+  .flor{
+    position:fixed;top:-40px;pointer-events:none;z-index:0;
+    animation:caer linear forwards;
+  }
+  @keyframes caer{
+    0%{transform:translateY(0) rotate(0deg);opacity:0}
+    10%{opacity:.85}
+    100%{transform:translateY(110vh) rotate(200deg);opacity:0}
+  }
+
+  #intro{
+    position:fixed;inset:0;z-index:10;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:linear-gradient(160deg,#eef4e6,#fdeedd);
+    transition:opacity 1s ease, visibility 1s;cursor:pointer;
+  }
+  #intro.oculto{opacity:0;visibility:hidden}
+  .sobre{
+    width:280px;height:180px;position:relative;
+    background:#f3d3b5;border-radius:6px;
+    box-shadow:0 15px 40px rgba(227,155,107,.35);
+    animation:latir 2s ease-in-out infinite;
+  }
+  .sobre::before{
+    content:"";position:absolute;top:0;left:0;
+    border-left:140px solid transparent;border-right:140px solid transparent;
+    border-top:100px solid #e8b98f;
+  }
+  .sello{
+    position:absolute;top:72px;left:50%;transform:translateX(-50%);
+    width:56px;height:56px;border-radius:50%;
+    background:var(--verde);color:#fff;font-size:26px;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+  }
+  @keyframes latir{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+  .intro-texto{
+    margin-top:30px;font-family:'Great Vibes',cursive;font-size:2.8rem;color:var(--durazno);
+    text-align:center;padding:0 20px;
+  }
+  .intro-sub{font-size:1.1rem;margin-top:6px;letter-spacing:2px;opacity:.75}
+
+  main{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:60px 22px 60px}
+  section{
+    background:rgba(255,252,246,.9);
+    backdrop-filter:blur(4px);
+    border-radius:22px;padding:42px 32px;margin-bottom:34px;
+    box-shadow:0 10px 35px rgba(122,154,107,.15);
+    border:1px solid rgba(201,162,74,.25);
+    opacity:0;transform:translateY(30px);transition:all 1s ease;
+  }
+  section.visible{opacity:1;transform:translateY(0)}
+
+  h1{
+    font-family:'Great Vibes',cursive;font-weight:400;text-align:center;
+    font-size:clamp(2.8rem,8.5vw,4.4rem);color:var(--durazno);line-height:1.15;
+  }
+  h2{
+    font-family:'Great Vibes',cursive;font-weight:400;
+    font-size:clamp(2.2rem,6vw,3rem);color:var(--verde);margin-bottom:16px;text-align:center;
+  }
+  p{font-size:1.3rem;line-height:1.75;margin-bottom:16px}
+  .carta p{text-align:justify}
+  .saludo{font-family:'Great Vibes',cursive;font-size:2.2rem;color:var(--durazno);margin-bottom:10px}
+  .destacado{font-weight:600;color:var(--verde)}
+  .adorno{color:var(--dorado);font-size:1.4rem;letter-spacing:10px;margin:10px 0;text-align:center}
+
+  .versiculo{font-style:italic;font-size:1.6rem;line-height:1.6;text-align:center}
+  .cita{margin-top:8px;font-weight:600;color:var(--dorado);letter-spacing:1px;font-size:1.1rem;text-align:center}
+  .nota-version{font-size:.85rem;opacity:.6;text-align:center;margin-bottom:14px}
+  .explica{text-align:center;font-size:1.2rem}
+
+  .gracias{list-style:none}
+  .gracias li{font-size:1.25rem;padding:10px 0;border-bottom:1px dashed rgba(201,162,74,.35);text-align:center}
+  .gracias li:last-child{border-bottom:none}
+
+  footer{position:relative;z-index:1;text-align:center;padding-bottom:50px}
+  .firma{font-family:'Great Vibes',cursive;font-size:2.6rem;color:var(--durazno)}
+
+  @media (max-width:480px){
+    section{padding:34px 20px}
+    p{font-size:1.15rem}
+    .versiculo{font-size:1.35rem}
+  }
+</style>
+</head>
+<body>
+
+<div id="intro">
+  <div class="sobre"><div class="sello">🌻</div></div>
+  <div class="intro-texto">Para Maritoo y mi suegrita linda</div>
+  <div class="intro-sub">toquen el sobre para abrir</div>
+</div>
+
+<main>
+
+  <section>
+    <h1>Gracias por abrirme su corazón</h1>
+    <div class="adorno">✿ ✿ ✿</div>
+  </section>
+
+  <section class="carta">
+    <div class="saludo">Querido Maritoo y suegrita linda:</div>
+    <p>
+      Quería regalarles este pequeño detalle para decirles algo que siento de
+      verdad: <span class="destacado">los quiero muchísimo.</span>
+    </p>
+    <p>
+      Desde el primer momento me recibieron con cariño, me abrieron las puertas
+      de su casa y me hicieron sentir parte de su familia. Eso, para mí,
+      vale más de lo que puedo explicar con palabras.
+    </p>
+    <p>
+      Gracias por haber criado a un hombre tan bueno, con tantos valores y con
+      un corazón tan lindo. Mucho de lo que amo de él lo aprendió de ustedes.
+    </p>
+    <p>
+      Le doy gracias a Dios por ponerlos en mi camino. Y si Él lo permite,
+      muy pronto seré parte de su familia de forma oficial, algo que me llena
+      el corazón de alegría.
+    </p>
+  </section>
+
+  <section>
+    <h2>Gracias por…</h2>
+    <ul class="gracias">
+      <li>🌻 Recibirme con tanto cariño desde el primer día</li>
+      <li>🌻 Hacerme sentir como en casa</li>
+      <li>🌻 Sus consejos, su paciencia y su amor</li>
+      <li>🌻 Criar al hombre que Dios preparó para mí</li>
+      <li>🌻 Ser tan lindos conmigo siempre</li>
+    </ul>
+    <div class="adorno">✿</div>
+    <p style="text-align:center">
+      Y a ti, <span class="destacado">Maritoo</span>, gracias por tu cariño,
+      tus chistes y por tratarme como a una hija más. 💛
+    </p>
+  </section>
+
+  <section>
+    <p class="versiculo">
+      Tu pueblo será mi pueblo, y tu Dios mi Dios.
+    </p>
+    <div class="cita">Rut 1:16</div>
+    <div class="nota-version">Reina-Valera 1909</div>
+    <p class="explica">
+      Así como Rut encontró una familia en Noemí,
+      yo encontré en ustedes una familia para toda la vida.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>Con todo mi cariño y gratitud,</p>
+  <div class="firma">Angie</div>
+</footer>
+
+<script>
+  const intro = document.getElementById('intro');
+  const secciones = document.querySelectorAll('section');
+  const obs = new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
+  },{threshold:.15});
+  intro.addEventListener('click', ()=>{
+    intro.classList.add('oculto');
+    secciones.forEach(s=>obs.observe(s));
+  });
+
+  const flores = ['🌻','🍃','🌼','🤍','🌿','💛'];
+  function crearFlor(){
+    const el = document.createElement('div');
+    el.className = 'flor';
+    el.textContent = flores[Math.floor(Math.random()*flores.length)];
+    el.style.left = Math.random()*100 + 'vw';
+    el.style.fontSize = (14 + Math.random()*22) + 'px';
+    const dur = 8 + Math.random()*7;
+    el.style.animationDuration = dur + 's';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(), dur*1000);
+  }
+  setInterval(crearFlor, 650);
+</script>
+</body>
+</html>
